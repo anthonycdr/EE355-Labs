@@ -1,0 +1,191 @@
+name: Autograding Tests
+'on':
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: part 1 recursive test 1
+      id: part-1-recursive-test-1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 1 recursive test 1
+        setup-command: g++ -o output.o *fibonacci_recursive.cpp
+        command: "./output.o 13"
+        input: ''
+        expected-output: '1'
+        comparison-method: contains
+        timeout: 10
+        max-score: 7
+    - name: part 1 recursive test 2
+      id: part-1-recursive-test-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 1 recursive test 2
+        setup-command: g++ -o output.o *fibonacci_recursive.cpp
+        command: "./output.o 66"
+        input: ''
+        expected-output: |-
+          0
+          89
+        comparison-method: contains
+        timeout: 10
+        max-score: 7
+    - name: part 1 recursive test 3
+      id: part-1-recursive-test-3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 1 recursive test 3
+        setup-command: g++ -o output.o *fibonacci_recursive.cpp
+        command: "./output.o 76"
+        input: ''
+        expected-output: |-
+          0
+          89
+        comparison-method: contains
+        timeout: 10
+        max-score: 8
+    - name: part 1 recursive test 4
+      id: part-1-recursive-test-4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 1 recursive test 4
+        setup-command: g++ -o output.o *fibonacci_recursive.cpp
+        command: "./output.o 355"
+        input: ''
+        expected-output: |-
+          0
+          377
+        comparison-method: contains
+        timeout: 10
+        max-score: 8
+    - name: part 1 dp test 1
+      id: part-1-dp-test-1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 1 dp test 1
+        setup-command: g++ -o output.o *fibonacci_dp.cpp
+        command: "./output.o 13"
+        input: ''
+        expected-output: '1'
+        comparison-method: contains
+        timeout: 10
+        max-score: 7
+    - name: part 1 dp test 2
+      id: part-1-dp-test-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 1 dp test 2
+        setup-command: g++ -o output.o *fibonacci_dp.cpp
+        command: "./output.o 66"
+        input: ''
+        expected-output: |-
+          0
+          89
+        comparison-method: contains
+        timeout: 10
+        max-score: 7
+    - name: part 1 dp test 3
+      id: part-1-dp-test-3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 1 dp test 3
+        setup-command: g++ -o output.o *fibonacci_dp.cpp
+        command: "./output.o 76"
+        input: ''
+        expected-output: |-
+          0
+          89
+        comparison-method: contains
+        timeout: 10
+        max-score: 8
+    - name: part 1 dp test 4
+      id: part-1-dp-test-4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 1 dp test 4
+        setup-command: g++ -o output.o *fibonacci_dp.cpp
+        command: "./output.o 355"
+        input: ''
+        expected-output: |-
+          0
+          377
+        comparison-method: contains
+        timeout: 10
+        max-score: 8
+    - name: part 2 python test 1
+      id: part-2-python-test-1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 2 python test 1
+        setup-command: ''
+        command: python3 *fibonacci.py 13
+        input: ''
+        expected-output: Congratulations! You have the Fibonacci 13
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: part 2 python test 2
+      id: part-2-python-test-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 2 python test 2
+        setup-command: ''
+        command: python3 *fibonacci.py 66
+        input: ''
+        expected-output: Sorry! 66 is not a Fibonacci number but the next Fibonacci
+          number to it is 89
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: part 2 python test 3
+      id: part-2-python-test-3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 2 python test 3
+        setup-command: ''
+        command: python3 *fibonacci.py 76
+        input: ''
+        expected-output: Sorry! 76 is not a Fibonacci number but the next Fibonacci
+          number to it is 89
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: part 2 python test 4
+      id: part-2-python-test-4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: part 2 python test 4
+        setup-command: ''
+        command: python3 *fibonacci.py 355
+        input: ''
+        expected-output: Sorry! 355 is not a Fibonacci number but the next Fibonacci
+          number to it is 377
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        PART-1-RECURSIVE-TEST-1_RESULTS: "${{steps.part-1-recursive-test-1.outputs.result}}"
+        PART-1-RECURSIVE-TEST-2_RESULTS: "${{steps.part-1-recursive-test-2.outputs.result}}"
+        PART-1-RECURSIVE-TEST-3_RESULTS: "${{steps.part-1-recursive-test-3.outputs.result}}"
+        PART-1-RECURSIVE-TEST-4_RESULTS: "${{steps.part-1-recursive-test-4.outputs.result}}"
+        PART-1-DP-TEST-1_RESULTS: "${{steps.part-1-dp-test-1.outputs.result}}"
+        PART-1-DP-TEST-2_RESULTS: "${{steps.part-1-dp-test-2.outputs.result}}"
+        PART-1-DP-TEST-3_RESULTS: "${{steps.part-1-dp-test-3.outputs.result}}"
+        PART-1-DP-TEST-4_RESULTS: "${{steps.part-1-dp-test-4.outputs.result}}"
+        PART-2-PYTHON-TEST-1_RESULTS: "${{steps.part-2-python-test-1.outputs.result}}"
+        PART-2-PYTHON-TEST-2_RESULTS: "${{steps.part-2-python-test-2.outputs.result}}"
+        PART-2-PYTHON-TEST-3_RESULTS: "${{steps.part-2-python-test-3.outputs.result}}"
+        PART-2-PYTHON-TEST-4_RESULTS: "${{steps.part-2-python-test-4.outputs.result}}"
+      with:
+        runners: part-1-recursive-test-1,part-1-recursive-test-2,part-1-recursive-test-3,part-1-recursive-test-4,part-1-dp-test-1,part-1-dp-test-2,part-1-dp-test-3,part-1-dp-test-4,part-2-python-test-1,part-2-python-test-2,part-2-python-test-3,part-2-python-test-4

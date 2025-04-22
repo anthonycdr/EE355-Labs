@@ -1,5 +1,5 @@
 Anthony Chandra
-ac68801@usc.edu
+
 
 Part I - Binary Search
 Time Complexity: O(log n)

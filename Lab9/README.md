@@ -1,5 +1,4 @@
 Name: Anthony Chandra  
-Email:ac68801@usc.edu
 
 Part 1: Singly Linked List
 This section implements a singly linked list with basic operations, including:

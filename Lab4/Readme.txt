@@ -1,5 +1,4 @@
 Name: Anthony Chandra  
-Email:ac68801@usc.edu
 
 This program demonstrates inheritance and polymorphism in C++ with three tasks:
 

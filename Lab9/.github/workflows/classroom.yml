@@ -1,0 +1,113 @@
+name: Test part1.cpp
+
+on: [push, pull_request]
+
+jobs:
+  compile-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Clone repository with input files
+      run: |
+        git clone https://github.com/Spring25-EE355/Lab9_input.git
+        cd Lab9_input
+        mv *.txt ../
+        cd ..
+
+    - name: Create input.txt
+      run: cat input_0.txt > input.txt
+
+    - name: Compile part1.cpp
+      run: g++ -o part1 *part1.cpp
+
+    - name: Run part1 and capture output
+      run: ./part1
+
+    - name: Run Autograding Tests 1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        max-score: 10
+        command: './part1'
+        expected-output: |
+          Linked List: 10 -> 20 -> 30 -> NULL
+          Linked List: 10 -> 20 -> 15 -> 30 -> NULL
+          Found
+          Linked List: 10 -> 15 -> 30 -> NULL
+          Popped: 10
+          Linked List: 15 -> 30 -> NULL
+          Not Found
+          Popped: 15
+          Linked List: 30 -> NULL
+        comparison-method: 'exact'
+
+
+    - name: Create input.txt
+      run: cat input_1.txt > input.txt
+
+    - name: Run Autograding Tests 2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        max-score: 10
+        command: './part1'
+        expected-output: |
+          Linked List: NULL
+          List is empty. Cannot pop.
+          Not Found
+          List is empty.
+          Linked List: 10 -> 20 -> 30 -> NULL
+          Linked List: 10 -> 20 -> 15 -> 30 -> NULL
+          Found
+          Linked List: 10 -> 15 -> 30 -> NULL
+          Popped: 10
+        comparison-method: 'exact'
+
+          
+    - name: Create input.txt
+      run: cat input_2.txt > input.txt
+
+    - name: Run Autograding Tests 3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        max-score: 10
+        command: './part1'
+        expected-output: |
+          Linked List: 100 -> NULL
+          Linked List: 50 -> 100 -> NULL
+          Linked List: 50 -> 100 -> 200 -> NULL
+          Value 300 not found in the list.
+          Linked List: 100 -> 200 -> NULL
+          Popped: 100
+          Popped: 200
+          List is empty. Cannot pop.
+          List is empty. Cannot pop.
+          Linked List: 5 -> 10 -> NULL
+        comparison-method: 'exact'
+
+    - name: Create input.txt
+      run: cat input_3.txt > input.txt
+      
+    - name: Run Autograding Tests 4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        max-score: 10
+        command: './part1'
+        expected-output: |
+          Linked List: 20 -> 5 -> 10 -> 15 -> NULL
+          Linked List: 20 -> 5 -> 25 -> 10 -> 15 -> NULL
+          Linked List: 30 -> 20 -> 5 -> 25 -> 10 -> 15 -> NULL
+          Linked List: 30 -> 20 -> 5 -> 25 -> 15 -> NULL
+          Linked List: 30 -> 20 -> 25 -> 15 -> NULL
+          Linked List: 15 -> 30 -> 20 -> 25 -> 15 -> NULL
+          Found
+          Linked List: 30 -> 20 -> 25 -> 15 -> NULL
+          Popped: 30
+          Linked List: 20 -> 25 -> 15 -> NULL
+        comparison-method: 'exact'
+

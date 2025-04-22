@@ -1,0 +1,127 @@
+name: Test part2.cpp
+
+on: [push, pull_request]
+
+jobs:
+  compile-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Clone repository with input files
+      run: |
+        git clone https://github.com/Spring25-EE355/Lab9_input.git
+        cd Lab9_input
+        mv *.txt ../
+
+    - name: Create input.txt
+      run: cat input_part2_0.txt > input_part2.txt
+
+    - name: Compile part2.cpp
+      run: g++ -o part2 *part2.cpp
+
+    - name: Run part1 and capture output
+      run: ./part2
+
+    - name: Run Autograding Tests 1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        command: './part2'
+        expected-output: |
+          Doubly Linked List: NULL
+          Doubly Linked List: 10 <-> 20 <-> NULL
+          Doubly Linked List: 10 <-> 15 <-> 20 <-> NULL
+          Found
+          Doubly Linked List: 10 <-> 20 <-> NULL
+          Is the list circular (two-pointer check)? No
+        comparison-method: 'exact'
+        max-score: 10
+
+
+    - name: Create input.txt
+      run: cat input_part2_1.txt > input_part2.txt
+
+    - name: Run Autograding Tests 2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        command: './part2'
+        expected-output: |
+          Invalid index or empty list.
+          Position out of bounds. Inserting at the end.
+          Doubly Linked List: 100 <-> NULL
+          Doubly Linked List: 50 <-> 100 <-> NULL
+          Index out of bounds.
+          Doubly Linked List: 50 <-> 100 <-> NULL
+          Doubly Linked List: 50 <-> NULL
+          Doubly Linked List: 50 <-> 200 <-> NULL
+          Not Found
+        comparison-method: 'exact'
+        max-score: 10
+
+          
+    - name: Create input.txt
+      run: cat input_part2_2.txt > input_part2.txt
+
+    - name: Run Autograding Tests 3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        command: './part2'
+        expected-output: |
+          Doubly Linked List: 5 <-> 20 <-> 10 <-> 15 <-> NULL
+          Found
+          Doubly Linked List: 5 <-> 20 <-> 15 <-> NULL
+          Position out of bounds. Inserting at the end.
+          Doubly Linked List: 5 <-> 20 <-> 15 <-> 25 <-> NULL
+          Doubly Linked List: 20 <-> 15 <-> 25 <-> NULL
+          Is the list circular (two-pointer check)? No
+          Not Found
+        comparison-method: 'exact'
+        max-score: 10
+
+    - name: Create input.txt
+      run: cat input_part2_3.txt > input_part2.txt
+      
+    - name: Run Autograding Tests 4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        command: './part2'
+        expected-output: |
+          Doubly Linked List: 200 <-> 100 <-> 300 <-> 200 <-> NULL
+          Found
+          Doubly Linked List: 200 <-> 300 <-> 200 <-> NULL
+          Doubly Linked List: 200 <-> 150 <-> 300 <-> 200 <-> NULL
+          Doubly Linked List: 200 <-> 150 <-> 200 <-> NULL
+          Index out of bounds.
+          Doubly Linked List: 200 <-> 150 <-> 200 <-> NULL
+          Not Found
+          Is the list circular (two-pointer check)? No
+        comparison-method: 'exact'
+        max-score: 10
+
+    - name: Run Autograding Circular Detection
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Circular Detection'
+        command: 'g++ -o part2_c *part2_circle.cpp && ./part2_c'
+        expected-output: |
+          Linear Doubly Linked List:
+          1 <-> 2 <-> 3 <-> 4 <-> 5 <-> NULL
+          Cycle detected: No
+
+          Doubly Linked List with a small cycle (limited output):
+          10 <-> 20 <-> 30 <-> 40 <-> 50 <-> 30 <-> 40 <-> 50 <-> 30 <-> 40 <-> ...
+          Cycle detected: Yes
+
+        max-score: 10
+        comparison-method: 'exact'
+
+
+
+
+

@@ -1,0 +1,118 @@
+name: Test part3.cpp
+
+on: [push, pull_request]
+
+jobs:
+  compile-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Clone repository with input files
+      run: |
+        git clone https://github.com/Spring25-EE355/Lab9_input.git
+        cd Lab9_input
+        mv *.txt ../
+
+    - name: Create input.txt
+      run: cat input_part3_0.txt > input_part3.txt
+
+    - name: Compile part3.cpp
+      run: g++ -o part3 *part3.cpp
+
+    - name: Run part3 and capture output
+      run: ./part3
+
+    - name: Run Autograding Tests 1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        command: './part3'
+        expected-output: |
+          Enqueued: 10 (size: 1)
+          Enqueued: 20 (size: 2)
+          Enqueued: 30 (size: 3)
+          Circular Queue: 10 -> 20 -> 30 -> (back to head)
+          Front element: 10
+          Dequeued: 10 (size: 2)
+          Circular Queue: 20 -> 30 -> (back to head)
+        comparison-method: 'exact'
+        max-score: 10
+
+
+    - name: Create input.txt
+      run: cat input_part3_1.txt > input_part3.txt
+
+    - name: Run Autograding Tests 2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        command: './part3'
+        expected-output: |
+          Queue is empty. Cannot dequeue.
+          Queue is empty.
+          Queue is empty.
+          Enqueued: 50 (size: 1)
+          Dequeued: 50 (size: 0)
+          Queue is empty.
+        comparison-method: 'exact'
+        max-score: 10
+
+          
+    - name: Create input.txt
+      run: cat input_part3_2.txt > input_part3.txt
+
+    - name: Run Autograding Tests 3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        command: './part3'
+        expected-output: |
+          Enqueued: 10 (size: 1)
+          Enqueued: 20 (size: 2)
+          Enqueued: 30 (size: 3)
+          Enqueued: 40 (size: 4)
+          Enqueued: 50 (size: 5)
+          Enqueued: 60 (size: 6)
+          Enqueued: 70 (size: 7)
+          Enqueued: 80 (size: 8)
+          Queue is full. Cannot enqueue 90.
+          Circular Queue: 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70 -> 80 -> (back to head)
+          Dequeued: 10 (size: 7)
+          Enqueued: 100 (size: 8)
+          Circular Queue: 20 -> 30 -> 40 -> 50 -> 60 -> 70 -> 80 -> 100 -> (back to head)
+        comparison-method: 'exact'
+        max-score: 10
+
+    - name: Create input.txt
+      run: cat input_part3_3.txt > input_part3.txt
+      
+    - name: Run Autograding Tests 4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Test Name'
+        command: './part3'
+        expected-output: |
+          Enqueued: 5 (size: 1)
+          Enqueued: 15 (size: 2)
+          Circular Queue: 5 -> 15 -> (back to head)
+          Dequeued: 5 (size: 1)
+          Front element: 15
+          Enqueued: 25 (size: 2)
+          Enqueued: 35 (size: 3)
+          Enqueued: 45 (size: 4)
+          Circular Queue: 15 -> 25 -> 35 -> 45 -> (back to head)
+          Dequeued: 15 (size: 3)
+          Dequeued: 25 (size: 2)
+          Circular Queue: 35 -> 45 -> (back to head)
+          Enqueued: 55 (size: 3)
+          Enqueued: 65 (size: 4)
+          Circular Queue: 35 -> 45 -> 55 -> 65 -> (back to head)
+        comparison-method: 'exact'
+        max-score: 10
+
+
+
+

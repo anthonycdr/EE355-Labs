@@ -1,6 +1,5 @@
 Name: Anthony Chandra
 
-Email: ac68801@usc.edu
 
 Program Summary
 This code that I submitted describes the implementation of two programs (Q1 & Q2) that demonstrate pointer-based operations in C++. Both programs read input from a file (input.txt for Q1) or command-line arguments (Q2), apply transformations, and write the results to an output file.

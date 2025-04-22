@@ -1,6 +1,5 @@
 
 Name: Anthony Chandra
-Email: ac68801@usc.edu
 
 1. PNG Image Handling
 - PNGImage:

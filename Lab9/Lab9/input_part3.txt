@@ -1,8 +1,0 @@
-7
-enqueue 10
-enqueue 20
-enqueue 30
-display
-peek
-dequeue
-display

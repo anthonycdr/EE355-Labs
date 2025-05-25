@@ -1,0 +1,387 @@
+Alex
+Davis
+08/30/1972
+(Gmail) alex.davis85@gmail.com
+(Home) 305-953-9874
+(College) University of Washington
+(Major) Mathematics
+10027
+--------------------
+Jamie
+Perez
+10/31/1978
+(Outlook) jamie.perez76@outlook.com
+(Work) 818-977-4948
+(College) UC Berkeley
+(Major) Mathematics
+15213
+--------------------
+Taylor
+Lee
+09/15/1984
+(Proton) taylor.lee56@proton.com
+(Home) 818-238-7992
+(College) Cornell University
+(Major) Biology
+14853
+--------------------
+Jordan
+Anderson
+12/14/1987
+(Outlook) jordan.anderson3@outlook.com
+(Mobile) 206-833-0266
+(College) MIT
+(Major) Mechanical Engineering
+48109
+--------------------
+Morgan
+Wilson
+10/02/1991
+(Gmail) morgan.wilson79@gmail.com
+(Home) 305-431-9292
+(College) Cornell University
+(Major) Civil Engineering
+08544
+--------------------
+Casey
+Moore
+01/19/1986
+(Yahoo) casey.moore7@yahoo.com
+(Home) 650-162-7751
+(College) Harvard University
+(Major) Computer Science
+30332
+--------------------
+Riley
+Brown
+11/18/1980
+(Proton) riley.brown75@proton.com
+(Mobile) 512-594-8112
+(College) Princeton University
+(Major) Electrical Engineering
+15213
+--------------------
+Cameron
+Taylor
+07/27/1988
+(Outlook) cameron.taylor39@outlook.com
+(Mobile) 818-400-6336
+(College) MIT
+(Major) Business Administration
+10027
+--------------------
+Drew
+Miller
+04/08/1987
+(Gmail) drew.miller91@gmail.com
+(Home) 650-142-0264
+(College) Carnegie Mellon University
+(Major) Business Administration
+08544
+--------------------
+Logan
+Smith
+05/08/1984
+(Yahoo) logan.smith39@yahoo.com
+(Home) 650-218-2225
+(College) MIT
+(Major) Biology
+48109
+--------------------
+Harper
+Hernandez
+12/08/1984
+(Gmail) harper.hernandez64@gmail.com
+(Office) 404-364-6351
+(College) UC Berkeley
+(Major) Physics
+10027
+--------------------
+Quinn
+Jones
+04/10/1975
+(Gmail) quinn.jones71@gmail.com
+(Home) 650-489-1854
+(College) Cornell University
+(Major) Biology
+10027
+--------------------
+Reese
+Thomas
+01/15/1973
+(Proton) reese.thomas38@proton.com
+(Home) 617-833-8021
+(College) Cornell University
+(Major) Mechanical Engineering
+14787
+--------------------
+Skyler
+Martinez
+10/16/2000
+(Gmail) skyler.martinez30@gmail.com
+(Mobile) 617-081-6903
+(College) Harvard University
+(Major) Biology
+08544
+--------------------
+Avery
+Martin
+03/09/1994
+(Yahoo) avery.martin36@yahoo.com
+(Home) 818-521-1237
+(College) University of Michigan
+(Major) Physics
+14853
+--------------------
+Charlie
+Johnson
+02/20/2000
+(Gmail) charlie.johnson6@gmail.com
+(Home) 512-318-8291
+(College) Princeton University
+(Major) Computer Science
+14787
+--------------------
+Dakota
+Rodriguez
+06/10/1994
+(Proton) dakota.rodriguez13@proton.com
+(Mobile) 303-105-2461
+(College) UC Berkeley
+(Major) Mechanical Engineering
+14853
+--------------------
+Emerson
+Williams
+07/29/1984
+(Yahoo) emerson.williams28@yahoo.com
+(Mobile) 213-055-0898
+(College) Princeton University
+(Major) Electrical Engineering
+48109
+--------------------
+Finley
+Hernandez
+06/16/1999
+(Outlook) finley.hernandez71@outlook.com
+(Work) 303-214-3612
+(College) University of Washington
+(Major) Civil Engineering
+08544
+--------------------
+Hayden
+Wilson
+04/16/1975
+(Outlook) hayden.wilson46@outlook.com
+(Home) 206-033-3922
+(College) Cornell University
+(Major) Mechanical Engineering
+94720
+--------------------
+Alex
+Hernandez
+11/30/1996
+(Gmail) alex.hernandez75@gmail.com
+(Home) 818-955-5236
+(College) Harvard University
+(Major) Economics
+08544
+--------------------
+Jamie
+Johnson
+11/08/2000
+(Gmail) jamie.johnson18@gmail.com
+(Office) 305-189-6894
+(College) University of Michigan
+(Major) Data Science
+98052
+--------------------
+Taylor
+Wilson
+06/12/1989
+(Yahoo) taylor.wilson87@yahoo.com
+(Office) 415-361-7547
+(College) UC Berkeley
+(Major) Biology
+48012
+--------------------
+Jordan
+Thomas
+09/13/1994
+(Outlook) jordan.thomas30@outlook.com
+(Home) 617-261-6597
+(College) UC Berkeley
+(Major) Electrical Engineering
+98052
+--------------------
+Morgan
+Rodriguez
+09/07/1993
+(iCloud) morgan.rodriguez44@icloud.com
+(Mobile) 213-562-8322
+(College) University of Michigan
+(Major) Business Administration
+15213
+--------------------
+Casey
+Moore
+03/21/1988
+(Gmail) casey.moore81@gmail.com
+(Home) 512-689-2804
+(College) University of Washington
+(Major) Mathematics
+48109
+--------------------
+Riley
+Smith
+12/01/1994
+(Yahoo) riley.smith22@yahoo.com
+(Home) 206-963-0063
+(College) Princeton University
+(Major) Computer Science
+98052
+--------------------
+Cameron
+Taylor
+02/18/1974
+(Proton) cameron.taylor55@proton.com
+(Mobile) 404-823-5847
+(College) MIT
+(Major) Mechanical Engineering
+10027
+--------------------
+Drew
+Garcia
+05/12/1975
+(Gmail) drew.garcia88@gmail.com
+(Home) 818-215-2080
+(College) Harvard University
+(Major) Mechanical Engineering
+48012
+--------------------
+Logan
+Jones
+01/09/1985
+(Yahoo) logan.jones2@yahoo.com
+(Work) 213-909-6142
+(College) UC Berkeley
+(Major) Biology
+48012
+--------------------
+Harper
+Miller
+01/13/2004
+(iCloud) harper.miller97@icloud.com
+(Office) 512-494-4244
+(College) MIT
+(Major) Biology
+11217
+--------------------
+Quinn
+Smith
+02/09/1992
+(Outlook) quinn.smith46@outlook.com
+(Office) 818-985-9615
+(College) Harvard University
+(Major) Computer Science
+30332
+--------------------
+Reese
+Miller
+09/25/1977
+(Yahoo) reese.miller46@yahoo.com
+(Work) 404-069-0669
+(College) UC Berkeley
+(Major) Business Administration
+10027
+--------------------
+Skyler
+Garcia
+05/27/1992
+(Proton) skyler.garcia97@proton.com
+(Home) 206-642-2726
+(College) Georgia Tech
+(Major) Biology
+14853
+--------------------
+Avery
+Rodriguez
+09/22/1992
+(Outlook) avery.rodriguez46@outlook.com
+(Mobile) 512-411-6377
+(College) Carnegie Mellon University
+(Major) Economics
+94720
+--------------------
+Charlie
+Johnson
+10/04/1978
+(iCloud) charlie.johnson19@icloud.com
+(Mobile) 512-867-6500
+(College) MIT
+(Major) Physics
+10027
+--------------------
+Dakota
+Garcia
+07/04/1999
+(Gmail) dakota.garcia41@gmail.com
+(Mobile) 305-042-2939
+(College) Harvard University
+(Major) Business Administration
+10027
+--------------------
+Emerson
+Taylor
+02/08/1991
+(Yahoo) emerson.taylor83@yahoo.com
+(Mobile) 212-517-4955
+(College) Harvard University
+(Major) Computer Science
+48012
+--------------------
+Finley
+Brown
+01/11/1994
+(iCloud) finley.brown98@icloud.com
+(Office) 305-568-8962
+(College) Georgia Tech
+(Major) Economics
+14853
+--------------------
+Hayden
+Hernandez
+11/13/1996
+(Gmail) hayden.hernandez90@gmail.com
+(Mobile) 415-744-3131
+(College) UC Berkeley
+(Major) Business Administration
+14853
+--------------------
+Alex
+Johnson
+10/28/1987
+(Proton) alex.johnson61@proton.com
+(Mobile) 650-668-5831
+(College) Princeton University
+(Major) Mechanical Engineering
+15213
+--------------------
+Jamie
+Rodriguez
+11/14/1998
+(Proton) jamie.rodriguez54@proton.com
+(Office) 818-086-9702
+(College) Harvard University
+(Major) Civil Engineering
+08544
+--------------------
+Taylor
+Hernandez
+12/28/1989
+(Outlook) taylor.hernandez34@outlook.com
+(Mobile) 212-347-8062
+(College) MIT
+(Major) Computer Science
+14853
+--------------------
